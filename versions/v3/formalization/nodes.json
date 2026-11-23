@@ -1,0 +1,256 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:ma2013-dsspectral-equal-blocks:3:s1",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "d9880e9f2c329bb3db982f33791419d5d90126b9",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d9880e9f2c329bb3db982f33791419d5d90126b9/D5/S0/Certificates/MouradAbbasC51Refutation.lean"
+      },
+      "lineage": "collected:ma2013-dsspectral-equal-blocks:s1",
+      "macros": {
+        "\\DS": "\\mathrm{DS}",
+        "\\Del": "\\Delta",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ma2013-dsspectral-equal-blocks",
+      "scope": "in_scope",
+      "statement": "Every doubly stochastic idempotent $E$ is permutation-similar to a direct sum $J_{m_1}\\oplus\\cdots\\oplus J_{m_q}$, where the positive integers $m_j$ sum to its order. In particular it is symmetric and has trace $q$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Equal-block extensions of Colbrook's refutation of the Mourad–Abbas spectral conjecture",
+      "toolchain": null,
+      "version": 3,
+      "work": "ma2013-dsspectral-equal-blocks"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:ma2013-dsspectral-equal-blocks:3:s2",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "d9880e9f2c329bb3db982f33791419d5d90126b9",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d9880e9f2c329bb3db982f33791419d5d90126b9/D5/S0/Certificates/MouradAbbasC51Refutation.lean"
+      },
+      "lineage": "collected:ma2013-dsspectral-equal-blocks:s2",
+      "macros": {
+        "\\DS": "\\mathrm{DS}",
+        "\\Del": "\\Delta",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ma2013-dsspectral-equal-blocks",
+      "scope": "in_scope",
+      "statement": "Fix integers $n\\geq2$ and $1\\leq r<n$, and $-1\\leq\\lambda<1$.\nThe diagonalizable real doubly stochastic matrices with spectrum consisting of $r$ copies of $1$ and $n-r$ copies of $\\lambda$ are, up to permutation similarity, precisely\n\\begin{equation}\n D_{m_1}(\\lambda)\\oplus\\cdots\\oplus D_{m_r}(\\lambda),\\qquad\n 1\\leq m_1\\leq\\cdots\\leq m_r,\\quad\n \\sum_jm_j=n,\\quad 1+(m_j-1)\\lambda\\geq0.\n\\end{equation}\nIn particular all these matrices are symmetric. Within this class, the spectrum characterizes a unique matrix up to permutation if and only if exactly one partition in~\\eqref{eq:partitions} exists.\nFor $\\lambda<0$, the allowed part sizes satisfy $m_j\\leq\\lfloor1-1/\\lambda\\rfloor$; for $\\lambda\\geq0$ there is no size bound.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Equal-block extensions of Colbrook's refutation of the Mourad–Abbas spectral conjecture",
+      "toolchain": null,
+      "version": 3,
+      "work": "ma2013-dsspectral-equal-blocks"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:ma2013-dsspectral-equal-blocks:3:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "d9880e9f2c329bb3db982f33791419d5d90126b9",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d9880e9f2c329bb3db982f33791419d5d90126b9/D5/S0/Certificates/MouradAbbasC51Refutation.lean"
+      },
+      "lineage": "collected:ma2013-dsspectral-equal-blocks:s3",
+      "macros": {
+        "\\DS": "\\mathrm{DS}",
+        "\\Del": "\\Delta",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ma2013-dsspectral-equal-blocks",
+      "scope": "in_scope",
+      "statement": "For a symmetric doubly stochastic matrix with two distinct eigenvalues, being $\\DS$ in $\\Del_n^s$ is equivalent to being $\\DS$ in $\\Del_n$.\nFor $0\\leq\\lambda<1$, the spectrum $\\{1^{(r)},\\lambda^{(n-r)}\\}$ is $\\DS$ precisely when $r=1$ or $r=n-1$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Equal-block extensions of Colbrook's refutation of the Mourad–Abbas spectral conjecture",
+      "toolchain": null,
+      "version": 3,
+      "work": "ma2013-dsspectral-equal-blocks"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:ma2013-dsspectral-equal-blocks:3:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "d9880e9f2c329bb3db982f33791419d5d90126b9",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d9880e9f2c329bb3db982f33791419d5d90126b9/D5/S0/Certificates/MouradAbbasC51Refutation.lean"
+      },
+      "lineage": "collected:ma2013-dsspectral-equal-blocks:s4",
+      "macros": {
+        "\\DS": "\\mathrm{DS}",
+        "\\Del": "\\Delta",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ma2013-dsspectral-equal-blocks",
+      "scope": "in_scope",
+      "statement": "The symmetric doubly stochastic matrices of trace zero having exactly two distinct eigenvalues are precisely, up to permutation similarity,\n$\\bigoplus_{j=1}^r C_k$ with $k\\geq2$ and $r\\geq1$.\nAll are $\\DS$ in $\\Del_n$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Equal-block extensions of Colbrook's refutation of the Mourad–Abbas spectral conjecture",
+      "toolchain": null,
+      "version": 3,
+      "work": "ma2013-dsspectral-equal-blocks"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:ma2013-dsspectral-equal-blocks:3:s5",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "d9880e9f2c329bb3db982f33791419d5d90126b9",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d9880e9f2c329bb3db982f33791419d5d90126b9/D5/S0/Certificates/MouradAbbasC51Refutation.lean"
+      },
+      "lineage": "collected:ma2013-dsspectral-equal-blocks:s5",
+      "macros": {
+        "\\DS": "\\mathrm{DS}",
+        "\\Del": "\\Delta",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ma2013-dsspectral-equal-blocks",
+      "scope": "in_scope",
+      "statement": "Let $k,r\\geq2$ be integers, $n=rk$, and $0\\leq t\\leq1$. Define\n\\begin{equation}\n A_{k,r}(t)=\\bigoplus_{j=1}^r\\bigl(tI_k+(1-t)C_k\\bigr),\n \\qquad \\lambda=\\frac{kt-1}{k-1}.\n\\end{equation}\nThen $A_{k,r}(t)$ is $\\DS$ in $\\Del_n$ if and only if\n\\begin{equation}\n 0\\leq t<1/k^2\\quad\\hbox{or}\\quad t=1.\n\\end{equation}\nThe same equivalence holds with $\\Del_n^s$ in place of $\\Del_n$.\nFor $t<1$ its eigenvalues are $1$, with multiplicity $r$, and $\\lambda$, with multiplicity $r(k-1)$, and its trace is $rkt$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Equal-block extensions of Colbrook's refutation of the Mourad–Abbas spectral conjecture",
+      "toolchain": null,
+      "version": 3,
+      "work": "ma2013-dsspectral-equal-blocks"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:ma2013-dsspectral-equal-blocks:3:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "d9880e9f2c329bb3db982f33791419d5d90126b9",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d9880e9f2c329bb3db982f33791419d5d90126b9/D5/S0/Certificates/MouradAbbasC51Refutation.lean"
+      },
+      "lineage": "collected:ma2013-dsspectral-equal-blocks:s6",
+      "macros": {
+        "\\DS": "\\mathrm{DS}",
+        "\\Del": "\\Delta",
+        "\\diag": "\\operatorname{diag}",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "ma2013-dsspectral-equal-blocks",
+      "scope": "in_scope",
+      "statement": "For every $k\\geq4$, $r\\geq2$ and $0<t<1/k^2$, the matrix $A_{k,r}(t)$ is a positive-trace $\\DS$ element of $\\Del_{rk}^s$ outside~\\eqref{eq:locus}. These give counterexamples in infinitely many orders. For $k=4$, $r=2$ and $t=1/40$, the matrix has diagonal $1/40$, off-diagonal entries $13/40$ inside each block, zero entries between blocks, trace $1/5$, and characteristic polynomial $(x-1)^2(x+3/10)^6$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Equal-block extensions of Colbrook's refutation of the Mourad–Abbas spectral conjecture",
+      "toolchain": null,
+      "version": 3,
+      "work": "ma2013-dsspectral-equal-blocks"
+    }
+  ]
+}

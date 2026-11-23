@@ -1,0 +1,51 @@
+{
+  "arithmetic": "Python fractions.Fraction; exact rational arithmetic throughout",
+  "characteristic_polynomial_evaluation_points": "integers 0..8 (degree 8)",
+  "cospectral_mate_determinant_evaluations": "det(I-A/(10+s)) = det(I-B/(10+s)), s=0..4; the common complete spectrum follows from the block formulas",
+  "cospectral_mate_instances": 70,
+  "coverage": "Finite rational checks of matrix identities, component partitions, cospectral mates and perturbations; the parameter classification and universal segment exclusions have written proofs in note.tex.",
+  "determined_instances": 56,
+  "identity_endpoints": 14,
+  "nonextremality_witnesses": 160,
+  "order_eight_characteristic_polynomial": "(x-1)^2 (x+3/10)^6",
+  "parameter_ranges": {
+    "cospectral_mates": [
+      "1/k^2",
+      "1/k",
+      "1/2",
+      "3/4",
+      "99/100"
+    ],
+    "determined": [
+      "0",
+      "1/(4k^2)",
+      "1/(2k^2)",
+      "3/(4k^2)"
+    ],
+    "k": "2..8",
+    "r": [
+      2,
+      3
+    ]
+  },
+  "sorted_component_partitions_examined": 752,
+  "status": "ALL_CHECKS_OK",
+  "two_eigenvalue_corollaries": {
+    "admitted_partition_instances": 1080,
+    "eigenvalues": [
+      "-1",
+      "-2/3",
+      "-1/2",
+      "-1/3",
+      "0",
+      "1/4",
+      "3/4"
+    ],
+    "independent_count": "recursive sorted partitions compared with generating-function dynamic programming",
+    "multiplicity_range": "1..n-1",
+    "order_range": "2..12",
+    "spectral_parameter_cases": 462,
+    "zero_trace_eigenvalue": "-r/(n-r), restricted to [-1,0)",
+    "zero_trace_parameter_cases": 36
+  }
+}

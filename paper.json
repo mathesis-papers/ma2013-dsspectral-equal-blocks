@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 80987,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "aad82d4016c00b3d9cfad074ec18ed43669151e808317bdb784740fbbd94b47c",
+      "sha256": "aad82d4016c00b3d9cfad074ec18ed43669151e808317bdb784740fbbd94b47c"
+    },
+    "source": {
+      "bytes": 14784,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "1a594f60fd3e821d54cd0589e2c14fdd8080c8dc6e60f8fceaf13cc82402330f",
+      "sha256": "1a594f60fd3e821d54cd0589e2c14fdd8080c8dc6e60f8fceaf13cc82402330f"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Extending Colbrook's counterexample of September 11, 2026 (Theorem IS-02, Sections 1–2), we refute Mourad and Abbas's Conjecture 5.1 (arXiv:1310.1273v1, p. 10) by a continuous equal-block family, using a component-size constraint for stochastic idempotents and a four-cycle perturbation. For integers k,r >= 2, put A_{k,r}(t) equal to the direct sum of r copies of t I_k + (1-t) C_k, where C_k has zero diagonal and off-diagonal entries 1/(k-1). We prove the exact classification: for 0 <= t <= 1, this matrix is determined, up to permutation similarity, among all similar doubly stochastic matrices if and only if t < 1/k^2 or t = 1. Using the classical integer-partition structure of diagonalizable doubly stochastic matrices with two distinct real eigenvalues, we obtain the two-eigenvalue part of the source's zero-trace question. When k >= 4 and 0 < t < 1/k^2, it has positive trace but lies on none of the segments in the conjecture. Explicit unequal-block matrices explain the sharp endpoint.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 3,
+    "doi": null,
+    "lean_source": {
+      "revision": "d9880e9f2c329bb3db982f33791419d5d90126b9",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/d9880e9f2c329bb3db982f33791419d5d90126b9/D5/S0/Certificates/MouradAbbasC51Refutation.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 80987,
+      "sha256": "aad82d4016c00b3d9cfad074ec18ed43669151e808317bdb784740fbbd94b47c",
+      "url": "/api/v1/collected-papers/ma2013-dsspectral-equal-blocks/files/pdf?version=3"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T17:46:15.208871801Z",
+    "record": "ma2013-dsspectral-equal-blocks",
+    "repository_name": "ma2013-dsspectral-equal-blocks",
+    "source": {
+      "bytes": 14784,
+      "sha256": "1a594f60fd3e821d54cd0589e2c14fdd8080c8dc6e60f8fceaf13cc82402330f",
+      "url": "/api/v1/collected-papers/ma2013-dsspectral-equal-blocks/files/source?version=3"
+    },
+    "title": "Equal-block extensions of Colbrook's refutation of the Mourad–Abbas spectral conjecture",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T17:46:15.208871801Z",
+        "revision": "3",
+        "version": 3
+      }
+    ],
+    "work": "ma2013-dsspectral-equal-blocks"
+  }
+}

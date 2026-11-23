@@ -1,0 +1,260 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\urlstyle{same}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\DS}{\mathrm{DS}}
+\newcommand{\Del}{\Delta}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\title{Equal-block extensions of Colbrook's refutation of the Mourad--Abbas spectral conjecture}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{November 19, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending Colbrook's counterexample of September 11, 2026~\cite{Colbrook}, we refute Mourad and Abbas's Conjecture~5.1 (arXiv:1310.1273v1, p.~10~\cite{MA}) by a continuous equal-block family, using a component-size constraint for stochastic idempotents and a four-cycle perturbation.
+For integers $k,r\geq2$, put $A_{k,r}(t)=\bigoplus_{j=1}^r(tI_k+(1-t)C_k)$, where $C_k$ has zero diagonal and off-diagonal entries $1/(k-1)$.
+We prove the exact classification: for $0\leq t\leq1$, this matrix is determined, up to permutation similarity, among all similar doubly stochastic matrices if and only if $t<1/k^2$ or $t=1$.
+Using the classical integer-partition structure of diagonalizable doubly stochastic matrices with two distinct real eigenvalues, we obtain the two-eigenvalue part of the source's zero-trace question.
+When $k\geq4$ and $0<t<1/k^2$, it has positive trace but lies on none of the segments in the conjecture. Explicit unequal-block matrices explain the sharp endpoint.
+\end{abstract}
+
+\section{The question and the contribution}
+We classify spectral determination for repeated equal-sized stochastic blocks, extending Colbrook's negative answer to the proposed segment locus of Mourad and Abbas. The threshold is the reciprocal square of the block size, apart from the identity endpoint.
+
+Let $\Del_n$ be the set of real entrywise nonnegative $n\times n$ matrices with every row and column sum equal to one; let $\Del_n^s$ be its symmetric subset.
+A matrix $A$ is \emph{determined by its spectra} ($\DS$) in a specified one of these sets if every matrix $B$ in that set similar to $A$ satisfies $B=P^TAP$ for some permutation matrix $P$.
+Here similar means $B=S^{-1}AS$ for an invertible real matrix $S$.
+For symmetric matrices, similarity is equivalent to equality of the eigenvalue multisets.
+Write $I_n$ for the identity, $J_n$ for the matrix with every entry $1/n$, and
+\[
+ C_n=\frac{nJ_n-I_n}{n-1}\quad(n\geq2),\qquad
+ [X,Y]=\{(1-s)X+sY:0\leq s\leq1\}.
+\]
+Mourad and Abbas's conjecture asserts that every $\DS$ matrix in $\Del_n^s$ of trace $a$, $0<a\leq n$, belongs to
+\begin{equation}\label{eq:locus}
+ [I_n,C_n]\ \cup\!
+ \bigcup_{V\in\operatorname{ext}(\Del_n^s)}\bigl([I_n,V]\cup[C_n,V]\bigr).
+\end{equation}
+The vertices here are extreme points of the \emph{full} symmetric polytope, not of a trace slice. No irreducibility assumption occurs in the conjecture.
+
+Colbrook~\cite[Theorem IS-02, Sections 1--2]{Colbrook} disproved this condition with $C_2\oplus J_2$, of spectrum $\{1,1,0,-1\}$ and trace one.
+Our contribution is the equal-block classification below and its continuous families outside~\eqref{eq:locus}, rather than the first negative answer to the conjecture.
+Farahat~\cite[Section 2, assertion (2.2) and the following paragraph, pp.~178--179]{Farahat} classifies doubly stochastic idempotents by integer partitions; Flor~\cite[Theorem 2]{Flor} gives broader nonnegative-idempotent structure.
+For two distinct eigenvalues, the affine-idempotent representation and its diagonal bound follow from da Cruz, Dolinar, Fernandes and Kuzma~\cite[Proposition 1.2, Theorem 2.1 and Remark 2.2, pp.~389--391]{Centralizers}.
+We reprove this classical structure and apply it to the sharp equal-block threshold and its spectral-determination corollaries.
+The source already treats $C_k\oplus C_k$ and more general direct sums of $C$-blocks~\cite[Theorem 2.12 and Corollary 2.13]{MA}.
+The present theorem identifies exactly how far an equal-block perturbation toward the identity preserves spectral determination, and allows nonsymmetric competitors under ordinary similarity.
+The structural classification below also answers Problems~1.3--1.4 within the two-eigenvalue class and establishes agreement of the symmetric and full-polytope notions there. These are elementary consequences of the idempotent structure, rather than additional refutations of source assertions.
+
+\section{Two eigenvalues and integer partitions}
+\begin{lemma}\label{lem:projection}
+Every doubly stochastic idempotent $E$ is permutation-similar to a direct sum $J_{m_1}\oplus\cdots\oplus J_{m_q}$, where the positive integers $m_j$ sum to its order. In particular it is symmetric and has trace $q$.
+\end{lemma}
+\begin{proof}
+Write $e_{ij}$ for the entries. For each column index $h$, idempotence and the row sums give
+\[
+ \sum_j e_{ij}(e_{jh}-e_{ih})^2
+   =\sum_j e_{ij}e_{jh}^2-e_{ih}^2.
+\]
+Summing over $i$ and using the column sums makes the right side zero. Every summand on the left is nonnegative. Consequently $e_{ij}>0$ implies that rows $i$ and $j$ coincide.
+
+Let $S_i=\{j:e_{ij}>0\}$. Column $i$ contains a positive entry $e_{\ell i}$; equality of rows $\ell$ and $i$ gives $e_{ii}=e_{\ell i}>0$. Hence $i\in S_i$.
+If $j\in S_i$, then $S_j=S_i$. If $S_i$ and $S_\ell$ intersect, equality of rows through an index in the intersection gives $S_i=S_\ell$.
+Thus the distinct sets $S_i$ partition the indices. On a part of size $m$, all rows coincide and entries outside the part vanish. The column sums now give $m e_{ij}=1$ inside that part. Its block is $J_m$, as required.
+\end{proof}
+
+For $m\geq1$ and $\lambda<1$, define the uniform block
+\[
+ D_m(\lambda)=\lambda I_m+(1-\lambda)J_m,
+ \qquad d_m=\frac{1+(m-1)\lambda}{m}.
+\]
+Its diagonal entries are $d_m$, its off-diagonal entries are $(1-\lambda)/m$, and its eigenvalues are $1$ once and $\lambda$ with multiplicity $m-1$.
+
+\begin{theorem}\label{thm:partitions}
+Fix integers $n\geq2$ and $1\leq r<n$, and $-1\leq\lambda<1$.
+The diagonalizable real doubly stochastic matrices with spectrum consisting of $r$ copies of $1$ and $n-r$ copies of $\lambda$ are, up to permutation similarity, precisely
+\begin{equation}\label{eq:partitions}
+ D_{m_1}(\lambda)\oplus\cdots\oplus D_{m_r}(\lambda),\qquad
+ 1\leq m_1\leq\cdots\leq m_r,\quad
+ \sum_jm_j=n,\quad 1+(m_j-1)\lambda\geq0.
+\end{equation}
+In particular all these matrices are symmetric. Within this class, the spectrum characterizes a unique matrix up to permutation if and only if exactly one partition in~\eqref{eq:partitions} exists.
+For $\lambda<0$, the allowed part sizes satisfy $m_j\leq\lfloor1-1/\lambda\rfloor$; for $\lambda\geq0$ there is no size bound.
+\end{theorem}
+\begin{proof}
+Let $B$ be such a matrix and put $E=(B-\lambda I_n)/(1-\lambda)$.
+Diagonalizability and the two eigenvalues imply $E^2=E$ and $\tr E=r$.
+Its row and column sums are one, and $e_{ij}=B_{ij}/(1-\lambda)\geq0$ for $i\ne j$.
+Even if $\lambda\geq0$, idempotence gives
+\[
+ e_{ii}(1-e_{ii})=\sum_{j\ne i}e_{ij}e_{ji}\geq0,
+\]
+so $0\leq e_{ii}\leq1$. Thus $E$ is doubly stochastic.
+Lemma~\ref{lem:projection} gives exactly $r$ uniform blocks, and recovering $B$ gives~\eqref{eq:partitions}.
+Nonnegativity is equivalent to the displayed diagonal inequalities.
+Conversely each admitted block sum has the required spectrum and is symmetric doubly stochastic.
+Its connected components, with an edge $ij$ when $i\ne j$ and $B_{ij}>0$, have sizes $m_1,\ldots,m_r$; hence distinct sorted partitions are not permutation-similar.
+This proves the uniqueness criterion and both size statements.
+\end{proof}
+
+\begin{corollary}\label{cor:converse}
+For a symmetric doubly stochastic matrix with two distinct eigenvalues, being $\DS$ in $\Del_n^s$ is equivalent to being $\DS$ in $\Del_n$.
+For $0\leq\lambda<1$, the spectrum $\{1^{(r)},\lambda^{(n-r)}\}$ is $\DS$ precisely when $r=1$ or $r=n-1$.
+\end{corollary}
+\begin{proof}
+Every similar doubly stochastic matrix is diagonalizable with the same eigenvalues and is therefore symmetric by Theorem~\ref{thm:partitions}.
+If $\lambda\geq0$, every partition is allowed.
+For $r=1$ or $n-r=1$ there is exactly one. If $r\geq2$ and $n-r\geq2$, the two partitions
+$(1,\ldots,1,n-r+1)$ and $(1,\ldots,1,2,n-r)$ are distinct and allowed, where the second has $r-2$ initial ones.
+\end{proof}
+
+\begin{corollary}\label{cor:zero}
+The symmetric doubly stochastic matrices of trace zero having exactly two distinct eigenvalues are precisely, up to permutation similarity,
+$\bigoplus_{j=1}^r C_k$ with $k\geq2$ and $r\geq1$.
+All are $\DS$ in $\Del_n$.
+\end{corollary}
+\begin{proof}
+Write their spectrum as in Theorem~\ref{thm:partitions}. Zero trace gives
+$\lambda=-r/(n-r)<0$, so each of the $r$ block sizes is at most $1-1/\lambda=n/r$.
+Their sum is $n$, so all must equal $k=n/r$, which is an integer at least two.
+Then $\lambda=-1/(k-1)$ and $D_k(\lambda)=C_k$.
+Conversely these sums have zero trace and two eigenvalues. The same size argument gives a unique partition, hence determination in $\Del_n$.
+\end{proof}
+
+\section{An exact equal-block threshold}
+\begin{theorem}\label{thm:threshold}
+Let $k,r\geq2$ be integers, $n=rk$, and $0\leq t\leq1$. Define
+\begin{equation}\label{eq:family}
+ A_{k,r}(t)=\bigoplus_{j=1}^r\bigl(tI_k+(1-t)C_k\bigr),
+ \qquad \lambda=\frac{kt-1}{k-1}.
+\end{equation}
+Then $A_{k,r}(t)$ is $\DS$ in $\Del_n$ if and only if
+\begin{equation}\label{eq:threshold}
+ 0\leq t<1/k^2\quad\hbox{or}\quad t=1.
+\end{equation}
+The same equivalence holds with $\Del_n^s$ in place of $\Del_n$.
+For $t<1$ its eigenvalues are $1$, with multiplicity $r$, and $\lambda$, with multiplicity $r(k-1)$, and its trace is $rkt$.
+\end{theorem}
+\begin{proof}
+Put $E_0=\bigoplus_{j=1}^r J_k$. Direct substitution gives
+\begin{equation}\label{eq:affine}
+ A_{k,r}(t)=\lambda I_n+(1-\lambda)E_0,
+ \quad (A_{k,r}(t)-I_n)(A_{k,r}(t)-\lambda I_n)=0.
+\end{equation}
+The constant vector in each block has eigenvalue $1$; the vectors whose coordinates sum to zero in a block have eigenvalue $\lambda$. This proves the spectral and trace formulas.
+
+Suppose first that $0\leq t<1/k^2$. Then
+\begin{equation}\label{eq:lambdabounds}
+ -\frac1{k-1}\leq\lambda<-\frac1k<0.
+\end{equation}
+By Theorem~\ref{thm:partitions}, any $B\in\Del_n$ similar to $A_{k,r}(t)$ is a sum of exactly $r$ blocks $D_{m_j}(\lambda)$, with $\sum_jm_j=rk$. Its diagonal entry in a block of size $m$ is
+\begin{equation}\label{eq:diagonal}
+ d_m=\lambda+\frac{1-\lambda}{m}
+     =\frac{1+(m-1)\lambda}{m}\geq0.
+\end{equation}
+If $m\geq k+1$, the numerator is at most $1+k\lambda<0$, a contradiction. All $r$ sizes are thus at most $k$, and their sum forces every size to equal $k$.
+One simultaneous permutation consequently carries $B$ to $A_{k,r}(t)$. This proves determination in $\Del_n$, hence also in $\Del_n^s$.
+
+Conversely, let $1/k^2\leq t<1$, so $-1/k\leq\lambda<1$.
+The off-diagonal entries are nonnegative, and~\eqref{eq:diagonal} is nonnegative for each $m\in\{k-1,k,k+1\}$. Indeed this is immediate for $\lambda\geq0$; for $\lambda<0$ use $1+(m-1)\lambda\geq1+k\lambda\geq0$.
+Hence
+\begin{equation}\label{eq:mate}
+ B=D_{k-1}(\lambda)\oplus D_{k+1}(\lambda)
+       \oplus\bigoplus_{j=1}^{r-2}D_k(\lambda)
+\end{equation}
+is symmetric doubly stochastic. A block $D_m(\lambda)$ has eigenvalue $1$ once and $\lambda$ with multiplicity $m-1$, also when $m=1$.
+Thus $A_{k,r}(t)$ and $B$ have the same eigenvalue multiset and, being real symmetric, are similar. They are not permutation-similar: every diagonal entry of $A_{k,r}(t)$ equals $t=d_k$, whereas $d_{k-1}\ne d_k$ since $1-\lambda>0$.
+Finally, at $t=1$ the family equals $I_n$, whose similarity class is a singleton. This proves both equivalences.
+\end{proof}
+
+\section{Exclusion from all the conjectured segments}
+\begin{corollary}\label{cor:refutation}
+For every $k\geq4$, $r\geq2$ and $0<t<1/k^2$, the matrix $A_{k,r}(t)$ is a positive-trace $\DS$ element of $\Del_{rk}^s$ outside~\eqref{eq:locus}. These give counterexamples in infinitely many orders. For $k=4$, $r=2$ and $t=1/40$, the matrix has diagonal $1/40$, off-diagonal entries $13/40$ inside each block, zero entries between blocks, trace $1/5$, and characteristic polynomial $(x-1)^2(x+3/10)^6$.
+\end{corollary}
+\begin{proof}
+Write $A=A_{k,r}(t)$ and $w=(1-t)/(k-1)>0$. Theorem~\ref{thm:threshold} proves determination and positive trace; also $rkt\leq rk$.
+Choose four distinct indices $a,b,c,d$ in the first block. Let $H$ be symmetric with
+\[
+ H_{ab}=H_{ba}=H_{cd}=H_{dc}=1,\quad
+ H_{bc}=H_{cb}=H_{da}=H_{ad}=-1,
+\]
+and all other entries zero. Each row and column sum of $H$ is zero. The two distinct matrices $A\pm(w/2)H$ are symmetric doubly stochastic and have midpoint $A$; hence $A$ is not extreme.
+
+If $A=(1-s)I_n+sC_n$, a zero entry between different blocks forces $s=0$, contrary to the positive within-block off-diagonal entries of $A$.
+If $A=(1-s)C_n+sV$ for an extreme point $V$, that same zero entry forces $s=1$, since all terms are nonnegative and $(C_n)_{ij}>0$ for $i\ne j$. This would make $V=A$, contradicting nonextremality.
+Finally suppose $A=(1-s)I_n+sV$. Here $s>0$, and $V$ has entry $w/s$ on all eight positions of the four-cycle. The matrices $V\pm(w/(2s))H$ remain nonnegative with row and column sums one and are symmetric. They are distinct and have midpoint $V$, contradicting its extremality. This excludes every extreme point, not just permutation matrices.
+The concrete formulas follow by substitution in~\eqref{eq:family}.
+\end{proof}
+
+\clearpage
+\section{Source coverage and verification scope}
+\begingroup\small
+\noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+Source item in arXiv:1310.1273v1 & Coverage\\
+\midrule
+Conjecture 5.1, p.~10 & Refuted (explicit counterexample): Colbrook~\cite{Colbrook}. Corollary~\ref{cor:refutation} extends it; no replacement segment characterization is asserted.\\[3pt]
+Problems 1.3--1.4, p.~2 & Two-eigenvalue part classified by Theorem~\ref{thm:partitions}; more than two eigenvalues not covered in general.\\[3pt]
+Symmetric/full-polytope converse, p.~2 & Answered: yes for two distinct eigenvalues (Corollary~\ref{cor:converse}); general converse not covered.\\[3pt]
+Theorem 2.10 and Corollary 2.11, p.~4 & Reproved; prior proof Mourad--Abbas (2013): $r=1$ in Theorem~\ref{thm:partitions}, with the identity treated separately.\\[3pt]
+Uniform-block example before Theorem 2.12, p.~4 & Reproved and completed for two eigenvalues: for $\lambda\geq0$, only $r=1$ or $r=n-1$ is determined (Corollary~\ref{cor:converse}).\\[3pt]
+Theorem 2.12 and Corollary 2.13, p.~4 & Reproved in the equal-block case; prior proof Mourad--Abbas (2013). Unequal $C$-blocks remain the source's cited result.\\[3pt]
+Theorem 2.14, p.~5; Section 3, pp.~6--9 & Prior results cited; the bipartite segment and complete order-three classification are not reproved.\\[3pt]
+Section 5, Question (1), p.~10 & General regular-graph implication not covered. The equal disjoint-clique case follows from Corollary~\ref{cor:zero} and was already stated in the source.\\[3pt]
+Section 5, Question (2), p.~10 & Zero-trace two-eigenvalue part classified by Corollary~\ref{cor:zero}; the full classification is not covered.\\
+Structural input & Reproved; prior proofs Farahat (1966), assertion (2.2), and da Cruz et al. (2017), Theorem 2.1 and Remark 2.2.\\
+\bottomrule
+\end{tabular}
+\endgroup
+\smallskip
+
+The counterexamples are reducible. An irreducible restriction of Conjecture~5.1 is not asserted in the source and is not decided by these constructions.
+The proofs above establish the partition classification, its corollaries and the equal-block threshold.
+The pinned Lean declaration
+\href{https://github.com/the-omega-institute/trureturing/blob/d9880e9f2c329bb3db982f33791419d5d90126b9/D5/S0/Certificates/MouradAbbasC51Refutation.lean}{\texttt{result}}
+proves the negation of the source's universal conjecture, using the order-eight witness. Its fully qualified name is \texttt{D5.S0.Certificates.}\allowbreak\texttt{MouradAbbasC51Refutation.result}.
+In the same file, \texttt{family\_isDS} proves spectral determination with symmetric competitors for $k\geq4$ and $0<t<1/k^2$; \texttt{family\_exclusion} and \texttt{family\_trace\_slice} establish segment exclusion and positive trace when also $r\geq2$.
+The partition classification, its two corollaries and the full threshold, including $k=2,3$, $t=0$, endpoint mates and nonsymmetric competitors, are written proofs, separate from those declarations' scope.
+The accompanying \texttt{verify.py} checks rational matrix identities, component-size partitions, explicit cospectral mates and four-cycle witnesses; its finite ranges and exact-arithmetic results are given in \texttt{verification.json}.
+
+\begin{thebibliography}{9}
+\bibitem{MA} B. Mourad and H. Abbas,
+\emph{On the symmetric doubly stochastic matrices that are determined by their spectra},
+arXiv:1310.1273v1 (2013), Sections 1--5, especially Conjecture 5.1, p.~10.
+\url{https://arxiv.org/abs/1310.1273v1}.
+
+\bibitem{Colbrook} M. J. Colbrook,
+\emph{IS-02: A counterexample to the spectral-uniqueness locus condition},
+September 11, 2026, Theorem IS-02, Sections 1--2.
+\href{https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/d25e2ccd77be39aee95f64d467a1109c0a76faf6/eigenvalues-and-inverse-problems/IS-02/solution.md}{Version-pinned mathematical text}.
+
+\bibitem{Farahat} H. K. Farahat,
+\emph{The semigroup of doubly-stochastic matrices},
+Proceedings of the Glasgow Mathematical Association \textbf{7} (1966), 178--183,
+Section 2, assertion (2.2) and the following paragraph.
+\url{https://doi.org/10.1017/S2040618500035401}.
+
+\bibitem{Centralizers} H. F. da Cruz, G. Dolinar, R. Fernandes and B. Kuzma,
+\emph{Maximal doubly stochastic matrix centralizers},
+Linear Algebra and its Applications \textbf{532} (2017), 387--396,
+Proposition 1.2, Theorem 2.1 and Remark 2.2.
+\url{https://doi.org/10.1016/j.laa.2017.06.029}.
+
+\bibitem{Flor} P. Flor,
+\emph{On groups of non-negative matrices},
+Compositio Mathematica \textbf{21} (1969), 376--382, Theorem 2.
+\url{https://www.numdam.org/item/CM_1969__21_4_376_0/}.
+\end{thebibliography}
+\smallskip
+\noindent\small\textcopyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0):
+\url{https://creativecommons.org/licenses/by/4.0/}.
+\end{document}
