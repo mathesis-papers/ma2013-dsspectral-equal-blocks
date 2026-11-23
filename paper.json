@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24446055",
     "current_version": 3,
-    "doi": null,
+    "doi": "10.5281/zenodo.24446056",
     "lean_source": {
       "revision": "d9880e9f2c329bb3db982f33791419d5d90126b9",
       "url": "https://github.com/the-omega-institute/trureturing/blob/d9880e9f2c329bb3db982f33791419d5d90126b9/D5/S0/Certificates/MouradAbbasC51Refutation.lean"
