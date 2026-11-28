@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24446055",
     "current_version": 3,
     "doi": "10.5281/zenodo.24446056",
+    "kind": "note",
     "lean_source": {
       "revision": "d9880e9f2c329bb3db982f33791419d5d90126b9",
       "url": "https://github.com/the-omega-institute/trureturing/blob/d9880e9f2c329bb3db982f33791419d5d90126b9/D5/S0/Certificates/MouradAbbasC51Refutation.lean"
@@ -55,10 +56,12 @@
     "title": "Equal-block extensions of Colbrook's refutation of the Mourad–Abbas spectral conjecture",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-23T17:46:15.208871801Z",
         "revision": "3",
-        "version": 3
+        "version": 3,
+        "version_label": null
       }
     ],
     "work": "ma2013-dsspectral-equal-blocks"
